@@ -38,7 +38,7 @@ if uploaded_file:
     st.dataframe(df)
 
     if len(df) > 1:
-        df = df.drop(index=1).reset_index(drop=True)
+        df = df.drop(index=0).reset_index(drop=True)
 
     df["Czas [s]"] = [i * 0.5 for i in range(len(df))]
 
